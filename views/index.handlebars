@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Burgers!</title>
+  <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<ul>
+  {{#each burgers}}
+    <li>
+      <p>
+        {{this.id}}. {{this.burger_name}}
+
+        <button data-burgerid="{{this.id}}" class="delburger">Devour</button>
+      </p>
+    </li>
+  {{/each}}
+</ul>
+
+
+   <h2>Add a Burger to Devour</h2>
+<form action="/" method="POST" id="addBurger" class="button-size">
+	<textarea type="text" name="burger"></textarea>
+	<button type="submit">Add Burger!</button>
+</form>
+
+<script type="text/javascript">
+
+  $("#addBurger").on("submit", function(event){
+      event.preventDefault();
+
+      var newBurger = {
+          burger: $("#addBurger [name=burger").val().trim()
+      };
+      // Send the POST request
+      $.ajax("/api/burgers", {
+          type: "POST",
+          data: newMovie
+      }).then(
+          function(){
+              console.log("added new burger");
+              //Reload the page to get the updated list
+              location.reload().
+          }
+      )
+  });
+
+</script>
+</html>

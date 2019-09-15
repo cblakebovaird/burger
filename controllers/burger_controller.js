@@ -1,6 +1,26 @@
+// Dependencies 
+// ==============================
 var express = require("express");
-var burger = require("../models/burger");
 
+// Setting up the router
+var router = express.Router();
 
+// Importing the model to use its database functions
+var burger = require("../models/burger.js");
 
-module.exports = "";
+// Create routes
+router.get("/", function(req, res){
+    burger.selectAll(function(data){
+        var hbsObject = {
+            burgers: data
+        };
+        console.log(hbsObject);
+        res.render("index", hbsObject);
+    });
+});
+
+router.post("/api/burgers", function (req, res){
+    
+});
+
+module.exports = router;
