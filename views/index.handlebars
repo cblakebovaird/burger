@@ -10,7 +10,7 @@
   {{#each burgers}}
     <li>
       <p>
-        {{this.id}}. {{this.burger_name}}
+        {{id}}. {{burger_name}}
 
         <button data-burgerid="{{this.id}}" class="delburger">Devour</button>
       </p>
@@ -36,7 +36,7 @@
       // Send the POST request
       $.ajax("/api/burgers", {
           type: "POST",
-          data: newMovie
+          data: newBurger
       }).then(
           function(){
               console.log("added new burger");

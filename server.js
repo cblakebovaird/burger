@@ -25,28 +25,6 @@ var routes = require("./controllers/burger_controller");
 
 app.use(routes);
 
-// Routes
-// app.get("/", function(req, res){
-//     connection.query("SELECT * FROM burgers;", function (err, data){
-//         if (err) {
-//             return res.status(500).end();
-//         }
-//         res.render("index", { burgers: data });
-//     });
-   
-// });
-
-// Get all burgers
-// app.get("/api/burgers", function(req, res){
-//     connection.query("SELECT * FROM burgers;", function (err, data){
-//         if (err) {
-//             return res.status(500).end();
-//         }
-//         res.json(data);
-//     });
-// });
-
-
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {
     // Log (server-side) when our server has started
