@@ -1,0 +1,49 @@
+body {
+    background-image: url("https://gunaxin.com/wp-content/uploads/2013/01/BOB.jpg");
+    background-size: cover;
+}
+
+#special-burger {
+    background-color: tan;
+    padding-left: 90px;
+    margin-left: 220px;
+}
+
+#eat {
+    background-color: tan;
+    margin-top : 20px;
+    margin-left: 80px;
+}
+
+h1, p{
+    background: red;
+    color: red;
+}
+
+#header {
+    background: transparent;
+    text-align: center;
+}
+#title, p {
+    background-color : red;
+    color: yellow;
+}
+
+.jumbotron-fluid {
+    background-color : red;
+}
+
+#orders {
+    background-color: tan;
+}
+
+h2 {
+    color: red;
+}
+
+header {
+    background-color:red;
+    text-align: center;
+    font-size: 350%;
+    color: yellow;
+}
